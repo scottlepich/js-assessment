@@ -107,3 +107,55 @@ purposes under the following conditions:
 
 Any of these conditions can be waived if you get permission from the copyright
 holder.
+
+
+var ret = [];
+  for (var i = 0; i < arr.length; i++) {
+    ret[i] = (function () {
+        var sqLoc = fn(arr[i]);
+        return function () {
+            return sqLoc;
+        }
+    })();
+}
+return ret;
+
+
+var newArr = [];
+for(var i = 0, l = arr.length; i<l; i++){
+    newArr.push( (function () {
+        var n = arr[i];
+        return function () {
+            return fn(n);
+        }
+    })() );
+}
+return newArr;
+
+
+var result = [];
+for (var i = 0, len = arr.length; i < len; i++) {
+    result.push((function() {
+        var value = fn(arr[i]);
+        return function () {
+            return value;
+        }
+    })());
+}
+//console.log(result);
+return result;
+
+
+var newArray = [];
+for (var i=0; i<arr.length; i++) {
+    newArray.push((function() {
+        var param = arr[i];
+        //var newFunc = fn(param)
+        return function() {
+            return fn(param);
+        };
+
+    })());
+}
+return newArray;
+

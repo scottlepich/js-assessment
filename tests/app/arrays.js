@@ -87,9 +87,9 @@ define([
     });
 
     it('you should be able to count the occurences of an item in an array', function() {
-      var result = answers.count([ 1, 2, 4, 4, 3, 4, 3 ], 4);
+      var result = answers.count([ 1, 1, 1, 2, 1, 3 ], 1);
 
-      expect(result).to.eql(3);
+      expect(result).to.eql(4);
     });
 
     it('you should be able to find duplicates in an array', function() {

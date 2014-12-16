@@ -14,6 +14,18 @@ define(function() {
 
     },
 
+//     it('you should be able to use closures', function () {
+//       var arr = [ Math.random(), Math.random(), Math.random(), Math.random() ];
+//       var square = function (x) { return x * x; };
+//
+//       var funcs = answers.makeClosures(arr, square);
+//       expect(funcs).to.have.length(arr.length);
+//
+//       for (var i = 0; i < arr.length; i++) {
+//         expect(funcs[i]()).to.eql(square(arr[i]));
+//       }
+//     });
+
     makeClosures : function(arr, fn) {
 
     },
